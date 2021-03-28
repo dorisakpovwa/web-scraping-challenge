@@ -1,9 +1,10 @@
 
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, jsonify, render_template, redirect, url_for
 from flask_pymongo import PyMongo
+from pymongo import MomgoClient
 import scrape_mars
 import pandas as pd
-import pymongo
+
 
 # Create an instance of Flask
 app = Flask(__name__)
