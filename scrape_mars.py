@@ -26,12 +26,12 @@ def scrape():
     mars.update({}, mars_data, upsert=True)
     return redirect('/', code=302)
 
-    mars_info = {}
-    mars_info['latest_title'] = news_title
-    mars_info['latest_p'] = news_p
-    mars_info['hemispheres'] = all_hemisphere_image_urls
-    #mars_info['mars_facts'] = html_table
-    marsdata.append(mars_info)  
+   # mars_infos = {}
+   # mars_infos['latest_title'] = news_title
+    # mars_infos['latest_p'] = news_p
+    # mars_infos['hemispheres'] = all_hemisphere_image_urls
+    #mars_infos['mars_facts'] = html_table
+    # marsdata.append(mars_infos)  
 
 
     if__name__ == "__main__":
