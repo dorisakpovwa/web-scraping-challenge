@@ -132,31 +132,30 @@ def webscrape():
     # Get facts about the planet including Diameter, Mass etc
     spacefacts=pd.read_html("https://space-facts.com/mars")
     df=spacefacts[0]
-    df
-
+    df.columns = ["Description", "Value"]
 
     # In[15]:
 
 
     # Use pandas to convert data to a HTML table string
     # html_table = df_to_html()
-    html_table= df.to_html(index=False, header=False)
-    html_table
+   # html_table= df.to_html(index=False, header=False)
+    # html_table
 
 
     # In[16]:
 
 
     # clean up the data by removing unwanted new lines
-    html_table= html_table.replace('\n', '')
-    html_table
+   # html_table= html_table.replace('\n', '')
+    # html_table
 
 
     # In[17]:
 
 
     # save the table directly to a file
-    df.to_html('table.html')
+     #df.to_html('table.html')
 
 
     # In[18]:
