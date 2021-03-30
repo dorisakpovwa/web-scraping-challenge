@@ -75,10 +75,6 @@ a {
 }
 
 
-#temp-image {
-  float: left;
-}
-
 #figure {
   position: relative;
 }
@@ -89,31 +85,6 @@ a {
     left: 210px
 }
 
-#visualization {
-  position: absolute;
-    top: 150px;
-    right: 210px
-}
-
-/* Selecting main images and size */
-
-#main-temp,
-#main-humi,
-#main-cloud,
-#main-windsp {
-  width: 60%;
-}
-
-#contact-info {
-  width: 30%;
-}
-
-#temp-image1 {
-  width: 200px;
-  height: 200px;
-  margin-right: 20px;
-  margin-top: 20px;
-}
 /* Selecting positions of visualization images */
 #featured-image,
 #cerberus-image,

@@ -32,11 +32,6 @@ def webscrape():
     url = 'https://mars.nasa.gov/news/'
     browser.visit(url)
 
-    # time.sleep(1)
-
-
-    # In[4]:
-
 
     # Scrape page into Soup object
     html = browser.html
@@ -73,31 +68,6 @@ def webscrape():
 
     # JPL Mars Space Images- Featured Image
 
-    # In[8]:
-
-
-
-    # images_url= "https://www.jpl.nasa.gov/images?search=&category=Mars"
-    # browser.visit(images_url)
-
-
-    # In[9]:
-
-
-    # images_data=browser.find_by_text("FULL IMAGE")
-    # images_data.click()
-
-
-    # In[10]:
-
-
-    #a1=browser.is_element_present_by_text("more info", wait_time=1)
-    #element2_is=browser.links.find_by_partial_text("more info")
-    #element2_is.click()
-
-
-    # In[11]:
-
 
     images_url= "https://spaceimages-mars.com/"
     browser.visit(images_url)
@@ -117,7 +87,7 @@ def webscrape():
 
     # Make sure to find the image url to the full size.jpg image
     # save complete url string for this image
-    jpl=soup.find("a", class_="showimg fancybox-thumbs")['href']
+    jpl=soup.find("a", class_="showimg fancybox-thumbs")["href"]
     featured_image_url=images_url+jpl
     featured_image_url
     #The given url was not working. I got this url from my tutor
@@ -139,7 +109,7 @@ def webscrape():
 
     # Use pandas to convert data to a HTML table string
     # html_table = df_to_html()
-   # html_table= df.to_html(index=False, header=False)
+    html_table= df.to_html(index=False, header=False)
     # html_table
 
 
