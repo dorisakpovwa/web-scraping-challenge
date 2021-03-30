@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +7,48 @@
   <title>scrape mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-
 <body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Visit the...</h1>
+      <p>Mission to Mars.</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    <div class="row">
+      <div class="col -md-12">
+        <h2>Latest Mars News</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col -md-12">
+        <h3>{{mars.latest_title}}</h3>
+        <p>{{mars.latest_p}}</p>
+      </div>
+     </div>
+    <div class="row">
+    <div class="col -md-8">
+      <h4>Featured Mars Image</h4>
+      <img src="{{mars.featured_image}}">
+    </div>
+    </div>
+    <div class="col -md-8">
+      <h4>Mars Facts</h4>
+      <table class="table table-striped">{{mars.mars_facts}}</table>
+    </div>
+    <div class="row">
+    {% for hemi in mars.hemispheres %}
+    <div class="col -md-6">
+      <img src="{{hemi.img_url}}" alt="">
+      <h4>{{hemi.title}}</h4>
+    {% endfor %}
+    </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- <body>
 
     <h1>MARS EXPLORATION</h1>
     <br>
@@ -22,6 +61,7 @@
     <main class="container">
       <div class = "row">
        <div class = "col-md-8 col-sm-12">
+
          <div class="card" style="width: 200rem;">
           <div class="card-body">
             <p><h4 class="card-title">Search <a href="https://mars.nasa.gov/news/">HERE</a> for latest news info!</p>
@@ -61,4 +101,4 @@
  
 </body> 
 
-</html>
+</html> -->
